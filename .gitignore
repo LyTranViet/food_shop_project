@@ -1,5 +1,0 @@
-# Ignore Vagrant files
-.vagrant/
-.dockerignore
-Dockerfile
-node_modules/
