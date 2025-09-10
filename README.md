@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Food Shop Project
 Đây là ứng dụng web Food Shop được xây dựng bằng PHP và MySQL.
@@ -90,3 +91,6 @@ docker exec -it vagrant-db-1 mysql -uuser -ppass
 
 # dừng và xóa container khi cần
 docker compose down
+=======
+# food_shop_project
+>>>>>>> 1b0be9118cec7d2081fb9aa4cb6f386c540e4f4b

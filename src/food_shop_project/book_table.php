@@ -59,9 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+
 $current_page = basename($_SERVER['PHP_SELF']); // lấy tên file hiện tại
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
