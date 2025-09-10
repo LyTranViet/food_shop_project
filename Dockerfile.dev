@@ -1,0 +1,15 @@
+# Dockerfile.dev
+FROM php:8.2-apache
+
+# Cài PHP extension cần thiết
+RUN docker-php-ext-install pdo pdo_mysql mysqli
+
+# Bật mod_rewrite
+RUN a2enmod rewrite
+
+# Copy code vào container
+WORKDIR /var/www/html
+COPY . .
+
+# Expose port 80
+EXPOSE 80

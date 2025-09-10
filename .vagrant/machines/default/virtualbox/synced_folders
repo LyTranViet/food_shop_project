@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/html":{"guestpath":"/var/www/html","hostpath":"E:/food_shop_project-main/src/food_shop_project","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"E:/food_shop_project-main","disabled":false,"__vagrantfile":true}}}
