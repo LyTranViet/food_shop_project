@@ -22,5 +22,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
+          context: .
+          file: ./Dockerfile # đường dẫn đến Dockerfile
           push: true
           tags: ltv012/food_shop_project:latest
