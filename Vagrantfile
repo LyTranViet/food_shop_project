@@ -5,8 +5,6 @@ Vagrant.configure("2") do |config|
   # Chia sẻ thư mục code PHP vào /var/www/html trong VM
   config.vm.synced_folder "./src/food_shop_project", "/var/www/html"
 
-  # Map port 8081 trên host → 80 trong VM (Apache mặc định)
-  config.vm.network "forwarded_port", guest: 80, host: 8081
 
   # Map port 8080 trên host → 8080 trong VM (để truy cập PHP app chạy trong Docker)
   config.vm.network "forwarded_port", guest: 8080, host: 8080
