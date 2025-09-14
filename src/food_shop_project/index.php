@@ -2,7 +2,7 @@
 session_start();
 require 'db.php';
 
-// Hàm escape an toàn
+// Hàm escape an toàn (chặn null -> chuỗi rỗng)
 function e($str) {
     return htmlspecialchars((string)($str ?? ''), ENT_QUOTES, 'UTF-8');
 }
@@ -155,8 +155,8 @@ $foods = $stmt->fetchAll();
             <?php endif; ?>
             <div class="card-body d-flex flex-column">
               <h5 class="text-danger fw-bold"><?= e($food['name']) ?></h5>
-              <p class="text-muted small flex-grow-1"><?= e($food['description']) ?></p>
-              <p class="fw-bold text-success"><?= number_format((float)$food['price'],0) ?>k</p>
+              <p class="text-muted small flex-grow-1"><?= e($food['description'] ?? '') ?></p>
+              <p class="fw-bold text-success"><?= number_format((float)($food['price'] ?? 0),0) ?>k</p>
 
               <form method="post" action="add_to_cart.php" class="d-flex mt-auto gap-2">
                 <input type="hidden" name="food_id" value="<?= e($food['id']) ?>">
@@ -174,9 +174,6 @@ $foods = $stmt->fetchAll();
     <div class="text-center text-muted py-5">Nhập từ khóa và nhấn tìm kiếm để xem món ăn.</div>
   <?php endif; ?>
 </div>
-
-<!-- Phần còn lại: Hero, Danh mục, Menu, Đặt bàn, Footer -->
-<!-- (ở các chỗ hiển thị name, description, image... mình đều thay bằng e($var)) -->
 
 <!-- Bootstrap Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
