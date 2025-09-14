@@ -400,3 +400,5 @@ bashdocker ps -a
 docker logs php_app
 
 Container dùng image mới, web chạy tại http://3.0.52.17:8080.
+https://youtu.be/u8MAk1ACuzg
+
